@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-pixel: 'VT323', monospace;
+}
+
+body {
+  font-family: var(--font-pixel);
+  background-color: #0b1220;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Tipografía Minecraft */
+.font-pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 1px;
+}
+
+/* Sombra de texto clásica de Minecraft */
+.text-shadow-pixel {
+  text-shadow: 2px 2px 0px #000000;
+}
+
+/* Botón estilo UI Minecraft (marco de madera/piedra) */
+.mc-button {
+  position: relative;
+  background-color: #706f71;
+  border: 3px solid #000000;
+  box-shadow: inset -3px -3px 0px #373737, inset 3px 3px 0px #dbdbdb;
+  color: #e0e0e0;
+  text-shadow: 2px 2px 0px #000;
+  font-family: var(--font-pixel);
+  font-size: 1.25rem;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.mc-button:hover {
+  background-color: #8b8a8c;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+.mc-button:active {
+  box-shadow: inset 3px 3px 0px #373737, inset -3px -3px 0px #dbdbdb;
+}
+
+/* Efecto brillante para el mensaje o el botón activo */
+.glow-effect {
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.6);
+}
+
+/* Estela de luz mágica estilo partículas pixel de Minecraft */
+.magic-trail {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  height: 220px;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 50% 80%, rgba(253, 224, 71, 0.8) 0%, transparent 60%),
+    radial-gradient(circle at 30% 40%, rgba(254, 240, 138, 0.6) 0%, transparent 40%),
+    radial-gradient(circle at 70% 30%, rgba(253, 224, 71, 0.5) 0%, transparent 50%);
+  filter: drop-shadow(0 0 12px rgba(250, 204, 21, 0.9));
+  opacity: 0.85;
+  animation: pulsoMagico 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulsoMagico {
+  0% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.7));
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(250, 204, 21, 1));
+  }
+}
+
+/* Estrellas de fondo tipo pixel */
+.pixel-stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 40px 70px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 160px 120px, #fde047, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 230px 10px, rgba(255,255,255,0.9), rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 250px 250px;
+}
